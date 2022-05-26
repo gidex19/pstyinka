@@ -1,0 +1,138 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+<div style="margin-top: 100px;" class="container">
+    <div class="row  mt-4 mb-4 ">
+        <div class="col-10 col-sm-10 col-md-8 col-lg-8 p-4 m-auto gradient-bg rounded" >
+            <h3 class="white">PASTORING THE PASTORS</h3>
+            <hr class="white">
+            <p class="white mt-1 mb-1 normal-p" style="font-size: small;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium expedita
+                quae quam facilis
+                quidem pariatur, temporibus, sequi voluptatem ratione officiis aliquam nisi rerum consectetur ipsum
+                quibusdam
+                dignissimos, tempore nulla! Quam ipsam ipsa voluptatem odit aspernatur? Nemo voluptas tempore unde neque
+                nisi
+                adipisci ullam quo excepturi voluptatem commodi! Saepe, ipsa cumque!</p>
+
+        </div>
+    </div>
+
+    <div class="row  ">
+        <div class="mt-3 mb-3 col-12 col-sm-12 col-md-8 col-lg-8 m-auto">
+            <div class="container">
+                <div class="row bg-light mt-4 rounded">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="img-fluid" src="{% static 'my_app/images/card1.jpg' %}">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p  class="mt-2 post-heading"> Post title goes here  
+                                <span
+                                    class="badge badge-info p-1 ml-1">Rev. Yinka Yusuf</span>
+                                </p>
+                            <p class="post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                accusamus, alias illo fuga consequuntur, doloribus magni voluptates ducimus deserunt
+                                incidunt cum dolorum molestias numquam reiciendis quisquam adipisci quaerat aperiam
+                                facere.</p>
+                                <a href="#" class="btn btn-sm btn-outline-info mb-2">Read More...</a>    
+                            <!-- <small class="text-muted">09 Nov, 2021</small> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg-light mt-4 rounded">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="img-fluid" src="{% static 'my_app/images/card1.jpg' %}">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p  class="mt-2 post-heading"> Post title goes here  
+                                <span
+                                    class="badge badge-info p-1 ml-1">Rev. Yinka Yusuf</span>
+                                </p>
+                            <p class="post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                accusamus, alias illo fuga consequuntur, doloribus magni voluptates ducimus deserunt
+                                incidunt cum dolorum molestias numquam reiciendis quisquam adipisci quaerat aperiam
+                                facere.</p>
+                                <a href="#" class="btn btn-sm btn-outline-info mb-2">Read More...</a>    
+                            <!-- <small class="text-muted">09 Nov, 2021</small> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row bg-light mt-4 rounded">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="img-fluid" src="{% static 'my_app/images/card1.jpg' %}">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p  class="mt-2 post-heading"> Post title goes here  
+                                <span
+                                    class="badge badge-info p-1 ml-1">Rev. Yinka Yusuf</span>
+                                </p>
+                            <p class="post-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                accusamus, alias illo fuga consequuntur, doloribus magni voluptates ducimus deserunt
+                                incidunt cum dolorum molestias numquam reiciendis quisquam adipisci quaerat aperiam
+                                facere.</p>
+                                <a href="#" class="btn btn-sm btn-outline-info mb-2">Read More...</a>    
+                            <!-- <small class="text-muted">09 Nov, 2021</small> -->
+                        </div>
+                    </div>
+                </div>
+                
+                {% for post in posts %}
+                <div class="row bg-light mt-4 rounded">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <img class="img-fluid" src="{% static 'my_app/images/card1.jpg' %}">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="post-text-div">
+                            <p  class="mt-2 post-heading"> {{post.title}}  
+                                <span
+                                    class="badge badge-info p-1 ml-1">{{post.author}}</span>
+                                </p>
+                            <p class="post-body"> {{post.body|truncatewords:20|safe}}</p>
+                            <!-- <small class="text-muted">09 Nov, 2021</small> -->
+                            <a href="{% url 'post-detail' post.id %}" class="btn btn-sm btn-outline-info mb-2">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+                
+
+            </div>
+
+            
+        </div>
+
+        <!-- <div class="mt-3 mb-3 col-12 col-sm-12 col-md-4 col-lg-4 bg-dark m-auto">
+            <div>
+                <h4>Recent Posts</h4>
+            </div>
+        </div> -->
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mr-1">
+            <div>
+                <p class="p-heading">RECENT POST</p>
+                <div class="card rounded" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title post-heading">Recent Posts  stays here</h5>
+                        <p class="card-text post-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio commodi maxime provident unde vero perferendis.</p>
+                        <a href="#" class="button-mini">Read More...</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock main-content %}
+
+

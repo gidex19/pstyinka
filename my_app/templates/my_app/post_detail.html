@@ -1,0 +1,48 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block main-content %}
+<div style="margin-top: 80px;">
+
+</div>
+
+
+<div class="container top-space-medium">
+    
+    <div class="row mt-2 mb-2">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 latest-articles">
+            
+            <div class="container">
+                <div class="  mt-4">
+                    <h2 class="large-bold">{{post.title}} </h2>
+                    <div>
+                        <img  style="height: 30vw; width: 80vh;" src="{{post.image.url}}" >
+                    </div>
+                    <!-- <div class="mb-2"><small class="text-muted">{{post.post_date}}</small></div> -->
+                    <p class="post-body">{{post.body|safe}}</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mr-1">
+            <div>
+                <p class="p-heading">RECENT POST</p>
+                <div class="card rounded" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title post-heading">Recent Posts  stays here</h5>
+                        <p class="card-text post-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio commodi maxime provident unde vero perferendis.</p>
+                        <a href="#" class="button-mini">Read More...</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock main-content %}

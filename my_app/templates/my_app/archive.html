@@ -1,0 +1,103 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block main-content %}
+<div style="margin-top: 80px;">
+
+</div>
+<div class="container mt-3">
+    <div class="row m-auto row-audio">
+        <div class="col-12 col-sm-12 col-md-9 col-lg-7 ">
+
+            {% for audio in audios %}
+
+            
+
+
+            <div  class="col-12 bg-light each-audio-div">
+                <div class="p-2">
+                    <div>
+                    <span class="badge badge-info">{{forloop.counter}}</span>
+                    <img class="m-auto mt-3" style="height: 75%; width: 10%;"
+                        src="{% static 'my_app/images/music.jpg' %}">
+                    <p style="vertical-align: middle; align-items: center; margin-top: 70%; display: inline;"
+                        class="audio-p ml-3">{{audio.title}} </p>
+                        </div>
+                        <div style="display: block;">
+                        <audio controls="controls">
+                            <source src="{{audio.audio_file.url}}" type="audio.mpeg">
+                            <p>your browser does not support audio player</p>
+                        </audio>
+                        <a href="{{audio.audio_file.url}}" style="text-decoration: none; float: right;"
+                            class=" ml-1 mb-1 btn-sm btn-info" download>Download</a>
+                        </div>
+                    
+                
+                </div>
+                
+
+            </div>
+
+            {% endfor %}
+        </div>
+
+
+
+
+        <div class="col-10 col-sm-10 col-md-9 col-lg-4 m-1 ">
+            <div>
+                <p class="p-heading">RECENT POST</p>
+                <div class="card rounded" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title post-heading">Recent Posts stays here</h5>
+                        <p class="card-text post-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+                            commodi maxime provident unde vero perferendis.</p>
+                        <a href="#" class="button-mini">Read More...</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- 
+/test code for audio div
+
+<div style="border: 0px solid grey;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;"  class="container audio-div">
+                <div class="row">
+                    <div class="col-4">
+
+                        <span class="badge badge-info">{{forloop.counter}}</span>
+                        <img class="m-auto mt-3" style="height: 75%; width: 30%;"
+                            src="{% static 'my_app/images/music.jpg' %}">
+                    </div>
+                    <div class="col-7 ml-1">
+                        <p style="vertical-align: middle; align-items: center; margin-top: 70%; display: inline;"
+                            class="audio-p ml-3">{{audio.title}} </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <audio controls="controls">
+                            <source src="{{audio.audio_file.url}}" type="audio.mpeg">
+                            <p>your browser does not support audio player</p>
+                        </audio>
+                        <a href="{{audio.audio_file.url}}" style="display: inline; text-decoration: none; float: right;"
+                            class=" ml-1 mb-1 btn-sm btn-info" download>Download</a>
+                    </div>
+
+                </div>
+            </div>
+
+/ends here -->
+
+
+{% endblock main-content %}

@@ -1,0 +1,311 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+.hero-section{
+    margin-top: -50vh;
+    margin-left: 7%;
+    z-index: 5;
+}
+.bg-img{
+    object-fit: cover; 
+    opacity: 0.3;
+    width: 100vw;
+    height: 100vh;
+}
+.gradient-text{
+
+}
+.after-space{
+    margin-top: 120px;
+}
+.boldest-h1{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right , rgba(115, 179, 199, 0.7), rgba(70, 189, 173, 0.8));
+    /* background-image: linear-gradient(rgba(29. 38, 113, 0.8), rgba(195, 55, 100, 0.7)), url("bg-pst.jpg"); */
+}
+.gradient-bg2{
+    background-image: linear-gradient(to right , rgba(34, 47, 51, 0.7), rgba(70, 189, 173, 0.8));
+}
+.overlay{
+    background-color: rgba(115, 179, 199, 0.4);
+    z-index: 3;
+}
+.header-revamped{
+    
+    background-image: url("bg-pst.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.container, .container-fluid{
+    overflow-x: hidden;
+}
+.header-img{
+    /* background-image: url("bg-image.jpg"); */
+    /* background-color: white; */
+    background-image: linear-gradient(to right, #73b3c7, #46bdad);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#sm-bq{
+    font-size: 10px;
+}
+.normal-p{
+    font-size: 13px;
+}
+blockquote{
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-style: italic;
+    padding: 0.35em 40px;
+    color: white;
+    /* margin-top: -120px; */
+    margin-top: -20%;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    /* position: absolute; */
+    /* left: -20px; */
+    top: -20px;
+    color: white;
+}
+.tron{
+    font-size: 16px;
+    font-weight: 600;
+}
+.holcdiv{
+/*     
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px; */
+}
+hr{
+    width: 20%;
+    
+    font-weight: bold;
+}
+.holc-img{
+    /* width: 100%;
+    height: 100%; */
+    object-fit: contain;
+
+}
+.header1-text{
+    font-weight: bolder;
+    margin-top: 40px;
+    
+}
+blockquote cite {
+    color:white;
+    font-size: 40px;
+    display: block;
+    /* margin-top: -20%; */
+}
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+.quotation-mark{
+    font-size: 80px;
+    font-weight: bolder;
+    color: white;
+}
+.header-div1{
+
+    /* background-image: url("pstyinka.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+.header-div2{
+    overflow: hidden;
+}
+.bold-p{
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+.white{
+    color: white;
+}
+
+.navbar-nav{
+    overflow: auto;
+}
+.bold-anchor{
+    font-weight: 500;
+}
+.card-blur1{
+    background-image: url("card1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.card-blur2{
+    background-image: url("card2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.embed-responsive-16by9{
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+.gradient-bg{
+    background-image: linear-gradient(to right, #5bc0de, #2c6ca5);
+}
+
+.footer{
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #73b3c7, #46bdad);
+}
+.linear{
+    background-image: linear-gradient(to right, #73b3c7, #46bdad);
+}
+.container-footer{
+    padding: 40px;
+
+}
+.footer-heading{
+    font-size: 23px;
+    color: white;
+    font-weight: bolder;
+}
+.footer-text{
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+}
+.anchor-block{
+    display: block;
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.anchor-block:hover{
+    color: black;
+}
+/* carousel css starts here */
+.carousel-caption{
+    background-image: linear-gradient(to right, #73b3c7, #46bdad);
+}
+
+
+/* carousel css ends here */
+
+
+.p-heading{
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bolder;
+    color:black;
+    border-bottom: 4px solid black;
+}
+.post-image-div{
+    width: 400px;
+    height: 200px;
+
+}
+.post-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.post-heading{
+    font-weight: bolder; text-transform: capitalize;
+}
+.post-body{
+    font-size: 12px;
+}
+
+p{
+    font-size: 14px;
+}
+.audio-p{
+    font-weight: 500;
+}
+.tg-infoblack{
+    /* background: -webkit-linear-gradient( #5bc0de, #303f3d); */
+    background: -webkit-linear-gradient(  #303f3d, #5bc0de);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tg-infolight{
+    background: -webkit-linear-gradient( #5bc0de, #e6ecee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+.row-audio{
+    margin-top: 100px;
+}
+
+.audio-div{
+    border: 0px solid grey;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.each-audio-div{
+    border: 0px solid grey;
+    border-radius: 10px;
+    height: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: red !important; */
+}
+
+@media all and (max-width: 500px){
+
+
+    
+.png-div{
+    display: none;
+}
+.after-space{
+    margin-top: 30px;
+}
+.holcdiv{
+    /* display: none; */
+}
+.each-audio-div{
+    margin-top: 60px !important;
+    margin-bottom: 10px !important;
+    height: 160px;
+    /* background-color: red !important; */
+}
+
+
+}
+
+@media (min-width: 501px) and (max-width: 785px){
+    .png-div{
+        display: none;
+    }
+    .each-audio-div{
+        margin-top: 60px !important;
+        margin-bottom: 40px !important;
+        height: 140px;
+        /* background-color: red !important; */
+    }
+    
+}
+

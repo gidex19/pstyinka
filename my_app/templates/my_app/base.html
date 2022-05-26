@@ -1,0 +1,137 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pst Yinka Yusuf</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'my_app/css/bootstrap.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'my_app/css/front.css' %}">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="m-4 bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light p-3">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="/examples/images/logo.svg" height="28" >
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav">
+                    <a href="{% url 'home' %}" class="nav-item nav-link active bold-anchor mr-2">Home</a>
+                    <a href="{% url 'blog' %}" class="nav-item nav-link bold-anchor mr-2 ">Pastoring Pastors</a>
+                    <a href="{% url 'archives' %}" class="nav-item nav-link bold-anchor mr-2">Digital Library</a>
+                    <a href="{% url 'legacy' %}" class="nav-item nav-link bold-anchor mr-2">Legacy</a>
+                    <a href="{% url 'power-crusades' %}" class="nav-item nav-link bold-anchor mr-2">Power Crusades</a>
+                
+                    <!-- <div class="dropdown show">
+                      <a href="#" class="btn btn-sm dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#"> Patoring</a>
+                        <a class="dropdown-item" href="#"> Patoring</a>
+                        <a class="dropdown-item" href="#"> Patoring</a>
+                      </div>
+                      </div> -->
+
+
+                </div>
+                <!-- search form
+                <div class="navbar-nav ms-auto">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search sermons" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+</div>
+{% block header-content %}
+
+{% endblock header-content %}
+
+
+{% block main-content %}
+
+{% endblock main-content %}
+
+<footer class="footer">
+  <div class="container col-12 container-footer">
+      <div class="row m-0">
+
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+              <p class="footer-heading"><b>MISSION AND VISION</b></p>
+              <hr>
+              <p class="text-capitalize small footer-text ">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At minus deserunt quidem quis ducimus. Accusamus temporibus, Architecto eaque deleniti reiciendis impedit! Aperiam fugiat tempore ea earum In deserunt voluptates, ducimus illo neque nostrum aliquid?
+              </p>
+              <p class="text-capitalize small footer-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, sequi?</p>
+
+
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2 p-2">
+              <p class="footer-heading"><b>MENU</b></p>
+              <hr>
+              <a href="{% url 'home' %}" class="text-capitalize small anchor-block">Home</a>
+              <a href="{% url 'blog' %}" class="text-capitalize small anchor-block">Pastoring Ministers</a>
+              <a href="{% url 'archives' %}" class="text-capitalize small anchor-block">Digital Library</a>
+              <a href="{% url 'legacy' %}" class="text-capitalize small anchor-block">Legacy</a>
+              <a href="{% url 'power-crusades' %}" class="text-capitalize small anchor-block">Power Crusades</a>
+
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-2  p-2">
+              <p class="footer-heading"><b>OTHER LINKS</b></p>
+              <hr>
+              <a href="#" class="text-capitalize small anchor-block">HOL Church</a>
+              <a href="{% url 'healings' %}" class="text-capitalize small anchor-block">Miracles are Forever</a>
+              <a href="#" class="text-capitalize small anchor-block">Facebook</a>
+              <a href="#" class="text-capitalize small anchor-block">Instagram</a>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</footer>
+
+<!-- my javascript contents starts here -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+{% block js %}
+
+{% endblock js %}
+</body>
+</html>
